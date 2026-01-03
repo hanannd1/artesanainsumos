@@ -1,0 +1,44 @@
+[
+  {
+    "img": "./../../assets/agujas/setAluminio.jpg",
+    "titulo": "Set de agujas de aluminio",
+    "descripcion": "Incluye 14 agujas de crochet multicolores de 2mm a 9mm",
+    "precio": "$",
+    "categoria": "Agujas"
+  },
+  {
+    "img": "./../../assets/agujas/setCartucheraRosado.jpg",
+    "titulo": "Set de agujas ergonomicas",
+    "descripcion": "Incluye 9 tamaños de agujas crochet + cartuchera de almacenamiento + 10 marcadores de punto + cinta metrica + contador + rematadora + agujas laneras metalicas",
+    "precio": "$",
+    "categoria": "Agujas"
+  },
+  {
+    "img": "./../../assets/agujas/setCartucheraBigote.jpg",
+    "titulo": "Set de agujas ergonomicas",
+    "descripcion": "Incluye 9 tamaños de agujas crochet + cartuchera de almacenamiento + cinta metrica + rematadora + contador + 12 marcadores de punto + agujas laneras metalicas",
+    "precio": "$",
+    "categoria": "Agujas"
+  },
+  {
+    "img": "./../../assets/agujas/setPlastico.jpg",
+    "titulo": "Set de agujas de plastico",
+    "descripcion": "Incluye 12 tamaños de agujas crochet",
+    "precio": "$",
+    "categoria": "Agujas"
+  },
+  {
+    "img": "./../../assets/agujas/setEstucheCompleto.jpg",
+    "titulo": "Set completo de insumos",
+    "descripcion": "Incluye 8 tamaños de agujas crochet + 20 marcadores de punto + set de alfileres + cinta metrica + agujas laneras plasticas y de metal + rematadora + anillo de tension + estuche de almacenamiento",
+    "precio": "$",
+    "categoria": "Agujas"
+  },
+  {
+    "img": "./../../assets/agujas/setEstucheCompleto2.jpg",
+    "titulo": "Set completo de insumos (81 piezas)",
+    "descripcion": "Incluye 9 tamaños de agujas crochet ergonomicas + 12 tamaños de agujas crochet de aluminio + 35 marcadores de punto + rematadora + cinta metrica + agujas laneras plasticas y de metal + regla para medir agujas + 2 contadores + estuche de almacenamiento + accesorios extra",
+    "precio": "$",
+    "categoria": "Agujas"
+  }
+]

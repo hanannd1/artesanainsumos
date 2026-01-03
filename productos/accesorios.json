@@ -1,0 +1,86 @@
+[
+  {
+    "img": "./../../assets/accesorios/anillosAnimalesVariados.jpg",
+    "titulo": "Anillos de tension para tejido",
+    "descripcion": "Consulta la disponibilidad de cada diseño",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+   {
+    "img": "./../../assets/accesorios/anillosGato.jpg",
+    "titulo": "Anillos de tension para tejido",
+    "descripcion": "Consulta la disponibilidad de cada color",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+   {
+    "img": "./../../assets/accesorios/contadorPuntos.jpg",
+    "titulo": "Contador digital de vueltas",
+    "descripcion": "Consulta la disponibilidad de cada color",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+    {
+    "img": "./../../assets/accesorios/lentesAmigurumi.jpg",
+    "titulo": "Lentes mini para amigurumis",
+    "descripcion": "Consulta la disponibilidad de cada color",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+   {
+    "img": "./../../assets/accesorios/llaveroAgujas.jpg",
+    "titulo": "Llavero de agujas crochet",
+    "descripcion": "",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+   {
+    "img": "./../../assets/accesorios/maquinaPompon.jpg",
+    "titulo": "Maquina para hacer pompones",
+    "descripcion": "",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+    {
+    "img": "./../../assets/accesorios/marcadores.jpg",
+    "titulo": "10 marcadores de punto",
+    "descripcion": "(colores variados)",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+   {
+    "img": "./../../assets/accesorios/metroKitty.jpg",
+    "titulo": "Cinta metrica retractil de Hello Kitty",
+    "descripcion": "",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+   {
+    "img": "./../../assets/accesorios/metroSanrio.jpg",
+    "titulo": "Cinta metrica retractil de personajes sanrio",
+    "descripcion": "Disponible Hello Kitty y Kuromi",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+    {
+    "img": "./../../assets/accesorios/ojosSeguridad.jpg",
+    "titulo": "Ojos de seguridad para amigurumis (paquete de 5 pares)",
+    "descripcion": "Disponibles tamaños 2mm, 3mm, 4mm, 5mm, 6mm, 7mm, 8mm, 9mm, 10mm, 11mm, 12mm",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+   {
+    "img": "./../../assets/accesorios/standAmigurumi.jpg",
+    "titulo": "Base/Soporte para amigurumis",
+    "descripcion": "la base de madera mide 1cm de grosor/altura y 6cm de diamtero, los palitos de aluminio miden 5cm de largo",
+    "precio": "$",
+    "categoria": "accesorios"
+  },
+   {
+    "img": "./../../assets/accesorios/tijeraRematadora.jpg",
+    "titulo": "Tijera rematadora de aluminio",
+    "descripcion": "Consulta la disponibilidad de cada color",
+    "precio": "$",
+    "categoria": "accesorios"
+  }
+]

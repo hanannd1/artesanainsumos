@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../normalize.css" type="text/css">
+    <link rel="stylesheet" href="./hilos.css" type="text/css">
+    <link rel="icon" href="./../../assets/logoArtesanaRedondo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Artesana insumos</title>
+</head>
+
+<body>
+    <div class="modalBox" id="modalBox">
+        <div class="modal">
+            <div class="button_close">
+                <div class="close_modal_button" onclick="close_modal()">
+                    <span class="material-symbols-outlined">
+close
+</span>
+                </div>
+            </div>
+            <div class="contenido">
+                <div class="img_div">
+                    <img src="" alt="">
+                </div>
+                <div class="caracteristicas_div">
+                    <h2></h2>
+                    <h2 class="precio_modal"></h2>
+                  <h3></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navSlide" id="navSlide">
+        <div class="botonNav" onclick="openAndCloseNav()">
+            <img src="./../../assets/simbolo-de-lista-de-tres-elementos-con-puntos.png" alt="">
+        </div>
+        <div class="categoriasMenu">
+            <a href="./hilos.html">Hilos</a>
+            <a href="./../agujas/agujas.html">Agujas</a>
+            <a href="./../accesorios/accesorios.html">Accesorios</a>
+           <a href="./../llaveros/llaveros.html">Llaveros</a>
+
+            <div class="iconWaAndIn">
+                <a href="https://wa.link/76fgft"> 
+                    <img class="icono-enlace-nav" src="./../../assets/icono-whatsapp.png">
+                </a>
+                <a href="https://www.instagram.com/artesana.mcbo?igsh=NDFnMzkzM21vdTk0">                
+                    <img class="icono-enlace-nav" src="./../../assets/icono-instagram.png">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="navegador">
+        <div class="menu">
+            <button class="boton" onclick="openAndCloseNav()">
+                <img class="imagen" src="./../../assets/simbolo-de-lista-de-tres-elementos-con-puntos.png">
+            </button>
+        </div>
+        <a href="./../../index.html" class="cajatitulo">
+            <h2 class="logotipo">ARTESANA INSUMOS</h2>
+        </a>
+        <div class="cajainvisible">
+        </div>
+    </div>
+    <section class="cuerpoVista">
+        <div class="portada">
+            <h2>Hilos para tejer (2mm)</h2>
+            <p>- Presentacion: Ovillo de 50gr por color <br>
+            - Grosor uniforme de 2mm <br>
+            - Hipoalergenico y suave al tacto <br><br>
+        <b>¿Como puedo hacer mi pedido?</b> <br><br>
+           1. Escoge cuantos ovillos deseas de cada color <br>
+           2. Envia tu lista al WhatsApp <br>
+           3. Define tu metodo de pago (Pago movil, Zinli o efectivo) <br>
+           4. Indica si sera retiro, delivery o envio nacional (mrw)</p>
+        </div>
+        <div class="botones" id="botones"></div>
+        <div class="catalogoCarteras" id="hilos"></div>
+    
+    </section>
+    </section>
+    <footer class="piedepagina">
+        <div class="contenidofooter">
+            <h2 class="logotipo footertitle">ARTESANA</h2>
+            <div class="linea"></div>
+            <ul>
+                <li>
+                    <a href="https://wa.link/76fgft">
+                        <img class="icono-enlace" src="./../../assets/icono-whatsapp.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/artesana.mcbo?igsh=NDFnMzkzM21vdTk0">
+                        <img class="icono-enlace" src="./../../assets/icono-instagram.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="./hilos.js"> </script>
+</html>
