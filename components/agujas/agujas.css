@@ -7,9 +7,9 @@
 }
 body{
     overflow-x: hidden;
-    box-sizing: border-box;
-    width: 100vw;
-    height:fit-content;
+    box-sizing: content-box;
+    max-width: 100vw;
+    height: fit-content;
 }
 .navegador{
     align-items: center;

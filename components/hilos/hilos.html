@@ -34,38 +34,8 @@ close
             </div>
         </div>
     </div>
-    <nav class="navSlide" id="navSlide">
-        <div class="botonNav" onclick="openAndCloseNav()">
-            <img src="./../../assets/simbolo-de-lista-de-tres-elementos-con-puntos.png" alt="">
-        </div>
-        <div class="categoriasMenu">
-            <a href="./hilos.html">Hilos</a>
-            <a href="./../agujas/agujas.html">Agujas</a>
-            <a href="./../accesorios/accesorios.html">Accesorios</a>
-           <a href="./../llaveros/llaveros.html">Llaveros</a>
-
-            <div class="iconWaAndIn">
-                <a href="https://wa.link/76fgft"> 
-                    <img class="icono-enlace-nav" src="./../../assets/icono-whatsapp.png">
-                </a>
-                <a href="https://www.instagram.com/artesana.mcbo?igsh=NDFnMzkzM21vdTk0">                
-                    <img class="icono-enlace-nav" src="./../../assets/icono-instagram.png">
-                </a>
-            </div>
-        </div>
-    </nav>
-    <div class="navegador">
-        <div class="menu">
-            <button class="boton" onclick="openAndCloseNav()">
-                <img class="imagen" src="./../../assets/simbolo-de-lista-de-tres-elementos-con-puntos.png">
-            </button>
-        </div>
-        <a href="./../../index.html" class="cajatitulo">
-            <h2 class="logotipo">ARTESANA INSUMOS</h2>
-        </a>
-        <div class="cajainvisible">
-        </div>
-    </div>
+    <nav-slide></nav-slide>
+    
     <section class="cuerpoVista">
         <div class="portada">
             <h2>Hilos para tejer (2mm)</h2>
@@ -84,24 +54,11 @@ close
     
     </section>
     </section>
-    <footer class="piedepagina">
-        <div class="contenidofooter">
-            <h2 class="logotipo footertitle">ARTESANA</h2>
-            <div class="linea"></div>
-            <ul>
-                <li>
-                    <a href="https://wa.link/76fgft">
-                        <img class="icono-enlace" src="./../../assets/icono-whatsapp.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/artesana.mcbo?igsh=NDFnMzkzM21vdTk0">
-                        <img class="icono-enlace" src="./../../assets/icono-instagram.png">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+        <footer-costume></footer-costume>
+
 </body>
 <script src="./hilos.js"> </script>
+<script src="./../../components-js/navegador/nav-slide.js"></script>
+<script src="./../../components-js/footer/footer.js"></script>
+
 </html>

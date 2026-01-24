@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nav Slide Pruebas</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+    <style>
+        /* ====== BARRA SUPERIOR ====== */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navegador {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fcdfd4;
+            padding: 10px;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .boton {
+            background-color: #fcdfd4;
+            cursor: pointer;
+            border: none;
+        }
+
+        .imagen {
+            width: 36px;
+        }
+
+        .cajatitulo {
+            text-decoration: none;
+        }
+
+        .logotipo {
+            color: #9E5170;
+            margin: 0;
+        }
+
+        /* ====== NAV SLIDE ====== */
+
+        .navSlide {
+            display: flex;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #fcdfd4;
+            position: fixed;
+            top: 0;
+            height: 100vh;
+            z-index: 1200;
+            padding: 10px 30px 10px 10px;
+            gap: 15px;
+            border-right: 5px #5c2c59 solid;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.80));
+            flex-direction: column;
+
+            left: -300px;
+            width: 300px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navSlide.open {
+            transform: translateX(300px);
+        }
+
+        .botonNav img {
+            width: 36px;
+            cursor: pointer;
+        }
+
+        .categoriasMenu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .categoriasMenu a {
+            text-decoration: none;
+            color: #5c2c59;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .iconWaAndIn {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .icono-enlace-nav {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+
+
+        /* ========== CarSlide ========*/
+        .CarSlide {
+            display: flex;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #fcdfd4;
+            position: fixed;
+            top: 0;
+            height: 100vh;
+            z-index: 1200;
+            padding: 10px;
+            gap: 15px;
+            border-left: 5px #5c2c59 solid;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.80));
+            flex-direction: column;
+
+            right: -500px;
+            width: 500px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .CarSlide.open {
+            transform: translateX(-500px);
+        }
+
+        .close_modal_button {
+            cursor: pointer;
+            transition: all .3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            color: #9E5170;
+            ;
+            border: solid 2px #9E5170;
+            ;
+            width: 25px;
+        }
+
+        .close_modal_button h3 {
+            margin: 0;
+            padding: 0;
+            width: fit-content;
+            line-height: 0;
+        }
+
+        .close_modal_button:hover {
+            color: white;
+            background-color: #9E5170;
+            ;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            transition: all .3s ease;
+        }
+
+        .title_car {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            color: #5c2c59;
+        }
+
+        .title_car h2 {
+            margin: 10px 0;
+        }
+
+        .body_car {
+            border: 3px solid #5c2c59;
+            padding: 10px;
+            border-radius: 15px;
+            display: flex;
+            gap: 10px;
+            height: 50vh;
+        }
+
+        .product_car {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            gap: 30px;
+        }
+        .product_img_car{
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .product_img_car img {
+            width: clamp(60px, 50vw, 80px);
+            object-fit: cover;
+            border-radius: 15px;
+            aspect-ratio: 1/1;
+        }
+        .product_details{
+            width: 80%;
+        }
+        .product_price_quantity{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .product_amount_car{
+            display: flex;
+            align-items: center;
+            height: fit-content;
+        }
+        .product_amount_car button{
+            background-color: #5c2c59;
+            color: white;
+            width: 30px;
+            border: transparent 2px solid;
+            transition: all .3s ease;
+            cursor: pointer;
+            height: 30px;
+
+        }
+        .product_amount_car p{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product_amount_car button:nth-child(1){
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+
+        }
+        .product_amount_car button:nth-child(3){
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+
+        }
+        .product_amount_car button:hover{
+            background-color: white;
+            color: #5c2c59;
+            width: 30px;
+            border: #5c2c59 2px solid;
+            transition: all .3s ease;
+
+        }
+        .product_price_car{
+            background-color: white;
+            width: fit-content;
+            height: 30px;
+            border-radius: 25%;
+            aspect-ratio: 1/1;
+            padding: 0 5px;
+        }
+        .product_price_car p{
+            margin: 5px 0;
+        }
+        .product_details_delete_car{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .delete_img img{
+            cursor: pointer;
+            width: clamp(15px, 50vw, 25px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ====== NAV SLIDE ====== -->
+    <nav class="navSlide" id="navSlide">
+        <div class="botonNav">
+            <img src="./../../assets/simbolo-de-lista-de-tres-elementos-con-puntos.png" alt="" onclick="toggleNav()">
+        </div>
+
+        <div class="categoriasMenu">
+            <a href="./hilos.html">Hilos</a>
+            <a href="./../agujas/agujas.html">Agujas</a>
+            <a href="./../accesorios/accesorios.html">Accesorios</a>
+            <a href="./../llaveros/llaveros.html">Llaveros</a>
+
+            <div class="iconWaAndIn">
+                <a href="https://wa.link/76fgft">
+                    <img class="icono-enlace-nav" src="./../../assets/icono-whatsapp.png">
+                </a>
+                <a href="https://www.instagram.com/artesana.mcbo?igsh=NDFnMzkzM21vdTk0">
+                    <img class="icono-enlace-nav" src="./../../assets/icono-instagram.png">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== BARRA SUPERIOR ====== -->
+    <div class="navegador">
+        <div class="menu">
+            <button class="boton" onclick="toggleNav()">
+                <img class="imagen" src="./../../assets/simbolo-de-lista-de-tres-elementos-con-puntos.png">
+            </button>
+        </div>
+
+        <a href="./../../index.html" class="cajatitulo">
+            <h2 class="logotipo">ARTESANA INSUMOS</h2>
+        </a>
+
+        <div class="menu">
+            <button class="boton" onclick="toggleNavCar()">
+                <img class="imagen" src="./../../assets/carrito-de-compras.png">
+            </button>
+        </div>
+    </div>
+
+    <!-- ====== NAV SLIDE ====== -->
+    <nav class="CarSlide open" id="CarSlide">
+        <div class="botonNav">
+
+            <div class="close_modal_button" onclick="toggleNavCar()">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </div>
+
+        </div>
+        <div class="title_car">
+            <h2>Carrito</h2>
+        </div>
+        <div class="body_car">
+            <div class="product_car">
+                <div class="product_img_car">
+                    <img src="assets/accesorios/anillosGato.jpg" alt="">
+                </div>
+                <div class="product_details">
+                    <div class="product_details_delete_car">
+                        <div>
+                            <p>detalles</p>
+                        </div>
+                         <div class="product_price_car">
+                            <p>$25000</p>
+                        </div>
+                          
+                    </div>
+                    <div class="product_price_quantity">
+                      
+                        <div class="product_amount_car">
+                            <button>+</button>
+                            <p>1</p>
+                            <button>-</button>
+                        </div>
+                        <div class="delete_img">
+                            <img src="./assets/bote-de-basura.png" alt="">
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="totals_car">
+            <p>Total $$$</p>
+        </div>
+        <div class="car_finish">
+            <button>Finalizar compra</button>
+        </div>
+    </nav>
+
+    <!-- ====== JS NORMAL ====== -->
+    <script>
+        let isOpen = false;
+
+        function toggleNav() {
+            const nav = document.getElementById("navSlide");
+            nav.classList.toggle("open");
+            isOpen = !isOpen;
+        }
+
+        let isOpenCar = false;
+
+        function toggleNavCar() {
+            const nav = document.getElementById("CarSlide");
+            nav.classList.toggle("open");
+            isOpen = !isOpen;
+        }
+    </script>
+
+</body>
+
+</html>
