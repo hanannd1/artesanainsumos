@@ -248,6 +248,7 @@ El total de mi compra es: $${total}
 Comentarios:
 ${comentarios || "Sin comentarios"}
 
+Quedo pendiente para confirmar mi pedido y coordinar el pago.
 ¡Muchas gracias! 💛🧶`;
 
     const telefono = "584246719237";
