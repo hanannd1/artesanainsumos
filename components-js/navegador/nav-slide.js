@@ -814,7 +814,6 @@ close_Modal_finish() {
             <a href="${BASE}components/hilos/hilos.html">Hilos</a>
             <a href="${BASE}components/agujas/agujas.html">Agujas</a>
             <a href="${BASE}components/accesorios/accesorios.html">Accesorios</a>
-           <a href="${BASE}components/llaveros/llaveros.html">Llaveros</a>
 
             <div class="iconWaAndIn">
                 <a href="https://wa.link/76fgft"> 
