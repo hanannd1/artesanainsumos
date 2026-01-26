@@ -266,6 +266,7 @@ Quedo pendiente para confirmar mi pedido y coordinar el pago.
         `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`,
         "_blank"
     );
+    this.close_Modal_finish();
     this.deleteCart();
 }
 
