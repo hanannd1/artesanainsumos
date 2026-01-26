@@ -2,35 +2,43 @@
     font-family: 'fuenteprincipal';
     src: url('./../../assets/HiguenSerif.otf') format('opentype');
 }
-*{
+
+* {
     font-family: 'fuenteprincipal';
 }
-body{
+
+body {
     overflow-x: hidden;
     box-sizing: content-box;
     max-width: 100vw;
     height: fit-content;
 }
-.navegador{
+
+.navegador {
     align-items: center;
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
     background-color: #fce0d5;
 }
-.imagen{
+
+.imagen {
     width: 36px;
     object-fit: cover;
 }
-.cajainvisible{
+
+.cajainvisible {
     width: 36px;
 }
-.cajatitulo{
+
+.cajatitulo {
     text-decoration: none;
 }
-.logotipo{
+
+.logotipo {
     color: #9E5170;
 }
-.boton{
+
+.boton {
     background-color: #fce0d5;
     border: transparent;
     cursor: pointer;
@@ -60,46 +68,53 @@ body{
 }
 
 .navSlide.open {
-    transform: translateX(300px); 
+    transform: translateX(300px);
 }
 
-.botonNav img{
+.botonNav img {
     width: 36px;
     object-fit: cover;
     cursor: pointer;
 }
-.categoriasMenu{
+
+.categoriasMenu {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-.categoriasMenu a{
+
+.categoriasMenu a {
     text-decoration: none;
     color: #9E5170;
     font-size: 22px;
     font-weight: 800;
 }
 
-.cuerpoVista{
+.cuerpoVista {
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
     padding: 0px 25px;
 }
-.portada h2{
+
+.portada h2 {
     font-size: 40px;
     color: #9E5170;
 }
-.portada p{
+
+.portada p {
     font-size: 20px;
 }
-.portada ul{
+
+.portada ul {
     font-size: 20px;
 }
-.portada li{
+
+.portada li {
     margin-bottom: 8px;
 }
-.botones{
+
+.botones {
     width: 100%;
     gap: 20px;
     display: flex;
@@ -108,10 +123,11 @@ body{
     padding: 10px;
 
 }
-.botones button{
+
+.botones button {
     padding: 10px;
     background-color: #9E5170;
-    color:white ;
+    color: white;
     border-radius: 15px;
     outline: none;
     font-size: 18px;
@@ -119,14 +135,16 @@ body{
     transition: all .2s ease;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
 }
-.botones button:hover{
+
+.botones button:hover {
     background-color: white;
     color: #9E5170;
     border: 2px #9E5170 solid;
     transition: all .2s ease;
-    
+
 }
-.botonColores{
+
+.botonColores {
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
@@ -135,10 +153,11 @@ body{
     margin-bottom: 15px;
     padding: 10px;
 }
-.botonColores button{
+
+.botonColores button {
     padding: 10px;
     background-color: #9E5170;
-    color:white ;
+    color: white;
     border-radius: 15px;
     outline: none;
     font-size: 18px;
@@ -146,25 +165,28 @@ body{
     transition: all .2s ease;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
 }
-.botonColores button:hover{
+
+.botonColores button:hover {
     background-color: white;
     color: #9E5170;
     border: 2px #9E5170 solid;
     transition: all .2s ease;
 }
-.catalogoFlores{
+
+.catalogoFlores {
     padding: 10px;
     width: 100%;
     height: fit-content;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns:  repeat(auto-fill, minmax(243.3px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(243.3px, 1fr));
     justify-items: center;
     gap: 40px;
-    margin-bottom: 30px ;
+    margin-bottom: 30px;
 }
-.coloresFlores{
-    display:flex;
+
+.coloresFlores {
+    display: flex;
     height: 0;
     box-sizing: border-box;
     overflow: hidden;
@@ -172,32 +194,37 @@ body{
     gap: 10px;
     transition: height .6s ease;
 }
-.coloresFlores div p{
+
+.coloresFlores div p {
     text-align: center;
-    
+
 }
-.coloresFlores img{
+
+.coloresFlores img {
     margin: 10px 10px 0px 10px;
     width: 80px;
     height: 80px;
     border-radius: 50%;
     aspect-ratio: 1/1;
     align-items: center;
-    object-fit:cover;
+    object-fit: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
 
 }
-button{
+
+button {
     cursor: pointer;
 }
-.tarjeta img{
+
+.tarjeta img {
     width: 200px;
     border-radius: 20px;
     margin-bottom: 10px;
     border: 2px #fce0d5 solid;
     height: 270px;
 }
-.tarjeta{
+
+.tarjeta {
     filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.80));
     overflow: hidden;
     box-sizing: border-box;
@@ -213,19 +240,23 @@ button{
     height: fit-content;
     cursor: pointer;
 }
-.tarjeta:hover{
+
+.tarjeta:hover {
     transition: all 0.5s ease;
     transform: scale(1.05);
     filter: drop-shadow(0px 9px 9px rgba(0, 0, 0, 5));
 
 }
-.tarjeta h3:nth-child(2){
-    font-size: 20px; 
+
+.tarjeta h3:nth-child(2) {
+    font-size: 20px;
 }
-.tarjeta h3:nth-child(3){
-    font-size: 20px; 
+
+.tarjeta h3:nth-child(3) {
+    font-size: 20px;
 }
-.tarjeta h3{
+
+.tarjeta h3 {
     margin: 10px 0;
     padding: 3px 0;
     width: 100%;
@@ -233,7 +264,8 @@ button{
     color: #9E5170;
     border-radius: 10px;
 }
-.tarjeta h2{
+
+.tarjeta h2 {
     margin: 10px 0;
     padding: 3px 0;
     width: 100%;
@@ -242,34 +274,41 @@ button{
     border-radius: 5px;
     font-size: 15px;
 }
-#bouquetsEspeciales, #complementos, #stock{
+
+#bouquetsEspeciales,
+#complementos,
+#stock {
     display: none;
 }
 
 /*footer*/
-.piedepagina{
+.piedepagina {
     background-color: #9E5170;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.icono-enlace{
+
+.icono-enlace {
     width: 40px;
     height: 40px;
     object-fit: cover;
 }
-.footertitle{
+
+.footertitle {
     color: #fce0d5;
 }
-.contenidofooter{
+
+.contenidofooter {
     width: 100%;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     margin: 20px;
 }
-.linea{
+
+.linea {
     height: 100px;
     width: 5px;
     border-radius: 100px;
@@ -277,27 +316,137 @@ button{
     margin: 0 30px;
 
 }
-.icono-enlace-nav{
+
+.icono-enlace-nav {
     width: 30px;
     height: 30px;
-    object-fit: cover; 
+    object-fit: cover;
 }
-.contenidofooter ul{
+
+.contenidofooter ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+.btn_add_cart {
+    background-color: green;
+    color: white;
+    height: fit-content;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: white 2px solid;
+    transition: all .2s ease;
+    cursor: pointer;
+
+}
+
+.btn_add_cart:hover {
+    background-color: white;
+    color: green;
+    border: white 2px solid;
+    transition: all .2s ease;
+}
+
+.product_amount_car {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    margin-bottom: 15px;
+
+}
+
+.product_amount_car button {
+    background-color: #5c2c59;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    border: transparent 2px solid;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.product_amount_car p {
+    color: #5c2c59;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.product_amount_car button:nth-child(1) {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.product_amount_car button:nth-child(3) {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.product_amount_car button:hover {
+    background-color: white;
+    color: #5c2c59;
+    border: #5c2c59 2px solid;
+    transition: all .3s ease;
+}
+
+.btn_add_cart {
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.btn_add_cart.added {
+    transform: scale(1.08);
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Opcional: animación carrito */
+@keyframes cartShake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+
+    75% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.cart_icon.shake {
+    animation: cartShake 0.4s ease;
+}
+
 @media (max-width: 800px) {
-    .catalogoCarteras{
+    .catalogoCarteras {
         align-content: center;
     }
-    .portada h2{
+
+    .portada h2 {
         text-align: center;
         margin: 15px 0;
     }
 }
-.modalBox{
+
+.modalBox {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -307,8 +456,9 @@ button{
     align-items: center;
     background-color: rgba(92, 44, 89, 0.6);
 }
-.modal{
-    width: clamp(300px,90vw,1200px);
+
+.modal {
+    width: clamp(300px, 90vw, 1200px);
     height: 80vh;
     background-color: #9E5170;
     color: white;
@@ -318,12 +468,14 @@ button{
     border-radius: 20px;
     border: solid 3px white;
 }
-.button_close{
+
+.button_close {
     display: flex;
     justify-content: end;
     padding-right: 15px;
 }
-.close_modal_button{
+
+.close_modal_button {
     cursor: pointer;
     transition: all .3s ease;
     display: flex;
@@ -335,20 +487,23 @@ button{
     position: absolute;
     border: solid 2px white;
 }
-.close_modal_button h3{
+
+.close_modal_button h3 {
     margin: 0;
     padding: 0;
     width: fit-content;
     line-height: 0;
 }
-.close_modal_button:hover{
+
+.close_modal_button:hover {
     color: #9E5170;
     background-color: white;
     border-radius: 50%;
     aspect-ratio: 1/1;
     transition: all .3s ease;
 }
-.contenido{
+
+.contenido {
     width: 100%;
     height: 100%;
     display: flex;
@@ -356,29 +511,38 @@ button{
     gap: 20px;
     box-sizing: content-box;
 }
-.img_div{
+
+.img_div {
     width: 50%;
     height: 100%;
     box-sizing: border-box;
     overflow: scroll;
     border: 8px white solid;
     background-color: white;
-    overflow: auto; /* o scroll, según lo que necesites */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  border-radius: 15px;
+    overflow: auto;
+    /* o scroll, según lo que necesites */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    border-radius: 15px;
 }
+
 .img_div::-webkit-scrollbar {
-  display: none; /* Chrome, Safari y Edge */
+    display: none;
+    /* Chrome, Safari y Edge */
 }
-.img_div img{
+
+.img_div img {
     object-fit: contain;
     width: 100%;
 }
-.caracteristicas_div{
+
+.caracteristicas_div {
     width: 50%;
 }
-.precio_modal{
+
+.precio_modal {
     background-color: #fce0d5;
     color: #9E5170;
     width: fit-content;
@@ -387,22 +551,26 @@ button{
 }
 
 @media (max-width: 800px) {
-    .img_div{
-           width: 100%;
-           height: 90%;
+    .img_div {
+        width: 100%;
+        height: 90%;
     }
-    .contenido{
+
+    .contenido {
         flex-flow: wrap row;
         overflow: scroll;
         gap: 0;
     }
-    .caracteristicas_div{
+
+    .caracteristicas_div {
         width: 100%;
     }
-    .caracteristicas_div h2{
-    text-align: center;
+
+    .caracteristicas_div h2 {
+        text-align: center;
     }
-    .precio_modal{
+
+    .precio_modal {
         margin: 0 auto;
     }
 }

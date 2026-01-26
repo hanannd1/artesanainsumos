@@ -104,8 +104,11 @@
         /* ========== CarSlide ========*/
         .CarSlide {
             display: flex;
+            overflow-y: auto;
+            overflow-x: hidden;
             box-sizing: border-box;
-            overflow: hidden;
+
+            scrollbar-width: none;
             background-color: #fcdfd4;
             position: fixed;
             top: 0;
@@ -132,21 +135,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px;
             border-radius: 50%;
             aspect-ratio: 1/1;
             color: #9E5170;
-            ;
             border: solid 2px #9E5170;
-            ;
-            width: 25px;
-        }
-
-        .close_modal_button h3 {
-            margin: 0;
-            padding: 0;
-            width: fit-content;
-            line-height: 0;
+            width: 30px;
         }
 
         .close_modal_button:hover {
@@ -172,11 +165,23 @@
 
         .body_car {
             border: 3px solid #5c2c59;
-            padding: 10px;
+            padding: 10px 30px;
             border-radius: 15px;
             display: flex;
-            gap: 10px;
-            height: 50vh;
+            flex-direction: column;
+            gap: 15px;
+            height: 100vh;
+
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-sizing: border-box;
+
+            scrollbar-width: none;
+        }
+
+        .body_car::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
         }
 
         .product_car {
@@ -184,94 +189,354 @@
             width: 100%;
             height: fit-content;
             gap: 30px;
+            padding: 0 5px;
         }
-        .product_img_car{
-            width: 20%;
+
+        .product_img_car {
+            width: 10%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         .product_img_car img {
-            width: clamp(60px, 50vw, 80px);
+            width: clamp(30px, 50vw, 60px);
             object-fit: cover;
             border-radius: 15px;
             aspect-ratio: 1/1;
+            border: 2px #5c2c59 solid;
+            border-radius: 12px;
         }
-        .product_details{
-            width: 80%;
+
+        .product_details {
+            width: 90%;
         }
-        .product_price_quantity{
-            display: flex;
+
+        .product_price_quantity {
+            display: grid;
+            grid-template-columns: auto auto 1fr;
             align-items: center;
-            justify-content: space-between;
+            gap: 10px;
+            width: 100%;
         }
-        .product_amount_car{
+
+        .product_amount_car {
             display: flex;
             align-items: center;
             height: fit-content;
         }
-        .product_amount_car button{
+
+        .product_amount_car button {
             background-color: #5c2c59;
             color: white;
-            width: 30px;
+            width: 25px;
+            font-weight: bold;
+            height: 25px;
             border: transparent 2px solid;
             transition: all .3s ease;
             cursor: pointer;
-            height: 30px;
 
         }
-        .product_amount_car p{
+
+        .product_amount_car p {
             background-color: white;
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 0;
         }
-        .product_amount_car button:nth-child(1){
+
+        .product_amount_car button:nth-child(1) {
             border-bottom-left-radius: 10px;
             border-top-left-radius: 10px;
 
         }
-        .product_amount_car button:nth-child(3){
+
+        .product_amount_car button:nth-child(3) {
             border-bottom-right-radius: 10px;
             border-top-right-radius: 10px;
 
         }
-        .product_amount_car button:hover{
+
+        .product_amount_car button:hover {
             background-color: white;
             color: #5c2c59;
-            width: 30px;
+            width: 25px;
             border: #5c2c59 2px solid;
             transition: all .3s ease;
+        }
+
+        .product_price_car {
+            border: 2px #5c2c59 solid;
+            border-radius: 12px;
+            height: 30px;
+            padding: 0 5px;
+            background-color: white;
+        }
+
+        .product_price_car p {
+            margin: 5px 0;
+            color: #5c2c59;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .product_details_delete_car {
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .product_details_delete_car p {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-size: 14px;
+        }
+
+        .delete_img img {
+            cursor: pointer;
+            width: clamp(15px, 50vw, 20px);
+            transition: all .3s ease;
+        }
+
+        .delete_img img:hover {
+            transform: scale(1.2);
+            transition: all .3s ease;
+        }
+
+        .total_car {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 15px;
+            border: 3px solid #5c2c59;
 
         }
-        .product_price_car{
-            background-color: white;
-            width: fit-content;
-            height: 30px;
-            border-radius: 25%;
-            aspect-ratio: 1/1;
-            padding: 0 5px;
+
+        .total_car h3 {
+            margin: 10px;
+            color: #5c2c59;
         }
-        .product_price_car p{
-            margin: 5px 0;
-        }
-        .product_details_delete_car{
+
+        .delete_finish_button {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        .delete_img img{
+
+        .green_button {
+            background-color: green;
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: transparent 2px solid;
+            transition: all .2s ease;
             cursor: pointer;
-            width: clamp(15px, 50vw, 25px);
         }
+
+        .green_button:hover {
+            background-color: white;
+            color: green;
+            border: green 2px solid;
+            transition: all .2s ease;
+        }
+
+        .red_button {
+            background-color: red;
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: transparent 2px solid;
+            transition: all .2s ease;
+            cursor: pointer;
+
+        }
+
+        .red_button:hover {
+            background-color: white;
+            color: red;
+            border: red 2px solid;
+            transition: all .2s ease;
+        }
+
+        .modalBox {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 1600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(92, 44, 89, 0.6);
+            opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+        }
+        .modalBox.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+        .modal {
+            width: fit-content;
+            background-color: #9E5170;
+            color: white;
+            padding: 10px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            overflow: hidden;
+            box-sizing: border-box;
+            border-radius: 20px;
+            border: solid 3px white;
+        }
+
+        .container_button_close {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+        }
+
+        .close_modal_button_finish {
+            cursor: pointer;
+            transition: all .3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            color: white;
+
+            border: solid 2px white;
+            width: 30px;
+
+        }
+
+        .close_modal_button_finish:hover {
+            color: #9E5170;
+            background-color: white;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            transition: all .3s ease;
+        }
+
+        .formPedido {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .label_input {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .label_input input, .label_input textarea{
+            border: 2px solid #5c2c59;
+            padding: 5px 15px;
+            border-radius: 10px;
+
+        }
+         .label_input input:focus, .label_input textarea:focus  {
+            outline: none;
+        }
+        .checkbox_unico input[type="radio"] {
+            accent-color: #5c2c59;
+            outline: none;
+            width: 30px;
+            margin: 8px 0;
+        }   
+
+       .button_finish_modal {
+            background-color: green;
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            margin: 0 auto;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: transparent 2px solid;
+            transition: all .2s ease;
+            cursor: pointer;
+        }
+
+        .button_finish_modal:hover {
+            background-color: white;
+            color: green;
+            border: green 2px solid;
+            transition: all .2s ease;
+        }
+
     </style>
 </head>
 
 <body>
 
     <!-- ====== NAV SLIDE ====== -->
+    <div class="modalBox" id="modal_finish">
+        <div class="modal">
+            <div class="container_button_close">
+                <div class="close_modal_button_finish" onclick="close_Modal_finish()">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <div>
+                <h2>¡Ya casi acabamos!</h2>
+            </div>
+            <form class="formPedido" id="formPedido">
+                <div class="label_input">
+                    <label>Nombres y Apellidos completos</label>
+                    <input type="text" id="nombreCliente" placeholder="Nombres y Apellidos completos">
+                </div>
+
+                <div>
+                    <label>Tipo de Entrega:</label>
+
+                    <div class="checkbox_unico">
+                        <input type="radio" name="entrega" value="Envío nacional">
+                        <label>Envío nacional</label>
+                    </div>
+
+                    <div class="checkbox_unico">
+                        <input type="radio" name="entrega" value="Delivery">
+                        <label>Delivery</label>
+                    </div>
+
+                    <div class="checkbox_unico">
+                        <input type="radio" name="entrega" value="Entrega presencial">
+                        <label>Entrega presencial</label>
+                    </div>
+                </div>
+
+                <div class="label_input">
+                    <label>Comentarios adicionales</label>
+                    <textarea id="comentarios" cols="30" rows="5"></textarea>
+                </div>
+
+                <button  class="button_finish_modal" type="button" onclick="enviarPedidoWhatsapp()">
+                    Finalizar pedido por WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+    </div>
     <nav class="navSlide" id="navSlide">
         <div class="botonNav">
             <img src="./../../assets/simbolo-de-lista-de-tres-elementos-con-puntos.png" alt="" onclick="toggleNav()">
@@ -316,57 +581,28 @@
     <!-- ====== NAV SLIDE ====== -->
     <nav class="CarSlide open" id="CarSlide">
         <div class="botonNav">
-
             <div class="close_modal_button" onclick="toggleNavCar()">
                 <span class="material-symbols-outlined">
                     close
                 </span>
             </div>
-
-        </div>
-        <div class="title_car">
-            <h2>Carrito</h2>
-        </div>
-        <div class="body_car">
-            <div class="product_car">
-                <div class="product_img_car">
-                    <img src="assets/accesorios/anillosGato.jpg" alt="">
-                </div>
-                <div class="product_details">
-                    <div class="product_details_delete_car">
-                        <div>
-                            <p>detalles</p>
-                        </div>
-                         <div class="product_price_car">
-                            <p>$25000</p>
-                        </div>
-                          
-                    </div>
-                    <div class="product_price_quantity">
-                      
-                        <div class="product_amount_car">
-                            <button>+</button>
-                            <p>1</p>
-                            <button>-</button>
-                        </div>
-                        <div class="delete_img">
-                            <img src="./assets/bote-de-basura.png" alt="">
-                        </div>
-                       
-                    </div>
-                </div>
-
+            <div class="title_car">
+                <h2>Carrito de Compras</h2>
             </div>
         </div>
-        <div class="totals_car">
-            <p>Total $$$</p>
+
+        <div class="body_car">
         </div>
-        <div class="car_finish">
-            <button>Finalizar compra</button>
+
+        <div class="total_car">
+            <h3>Total $250</h3>
+        </div>
+        <div class="delete_finish_button">
+            <button class="red_button">Eliminar carrito</button>
+            <button class="green_button">Finalizar compra</button>
         </div>
     </nav>
 
-    <!-- ====== JS NORMAL ====== -->
     <script>
         let isOpen = false;
 
@@ -380,9 +616,183 @@
 
         function toggleNavCar() {
             const nav = document.getElementById("CarSlide");
+            const isOpening = !nav.classList.contains("open");
+
             nav.classList.toggle("open");
-            isOpen = !isOpen;
+
+            if (isOpening) {
+                renderCartInNav();
+            }
         }
+
+        function getCart() {
+            return JSON.parse(localStorage.getItem("cart")) || [];
+        }
+        function saveCart(cart) {
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+
+        function renderCartInNav() {
+            const nav = document.getElementById("CarSlide");
+            const bodyCar = nav.querySelector(".body_car");
+
+            if (!bodyCar) return;
+
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            bodyCar.innerHTML = "";
+
+            cart.forEach(item => {
+                const product = document.createElement("div");
+                product.classList.add("product_car");
+
+                product.innerHTML = `
+            <div class="product_img_car">
+                <img src="${item.img}" alt="${item.titulo}">
+            </div>
+
+            <div class="product_details">
+                <div class="product_details_delete_car">
+                    <p>${item.titulo}</p>
+                </div>
+
+                <div class="product_price_quantity">
+                    <div class="delete_img" data-titulo="${item.titulo}">
+                        <img src="./assets/bote-de-basura.png">
+                    </div>
+
+                    <div class="product_amount_car">
+                        <button data-action="plus" data-titulo="${item.titulo}">+</button>
+                        <p>${item.cantidad}</p>
+                        <button data-action="minus" data-titulo="${item.titulo}">-</button>
+                    </div>
+
+                    <div class="product_price_car">
+                        <p>$${(item.precio * item.cantidad).toLocaleString()}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+                bodyCar.appendChild(product);
+            });
+        }
+
+
+        document.addEventListener("click", (e) => {
+            const titulo = e.target.dataset.titulo;
+            const action = e.target.dataset.action;
+
+            if (!titulo) return;
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const index = cart.findIndex(item => item.titulo === titulo);
+
+            if (index === -1) return;
+
+            if (action === "plus") cart[index].cantidad++;
+            if (action === "minus") {
+                cart[index].cantidad--;
+                if (cart[index].cantidad <= 0) cart.splice(index, 1);
+            }
+
+            if (e.target.closest(".delete_img")) {
+                cart.splice(index, 1);
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCartInNav();
+        });
+
+        function parsePrice(precio) {
+            if (typeof precio === "number") return precio;
+
+            if (typeof precio === "string") {
+                return Number(
+                    precio
+                        .replace("$", "")
+                        .replace(",", ".")
+                        .trim()
+                ) || 0;
+            }
+
+            return 0;
+        }
+
+
+        function enviarPedidoWhatsapp() {
+            const nombre = document.getElementById("nombreCliente").value.trim();
+
+            const entregaSeleccionada = document.querySelector(
+                'input[name="entrega"]:checked'
+            );
+
+            const comentarios = document.getElementById("comentarios").value.trim();
+
+            if (!nombre) {
+                alert("Por favor ingresa tu nombre completo");
+                return;
+            }
+
+            if (!entregaSeleccionada) {
+                alert("Por favor selecciona un tipo de entrega");
+                return;
+            }
+
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            if (cart.length === 0) {
+                alert("El carrito está vacío");
+                return;
+            }
+
+            let total = 0;
+
+            let mensaje = `¡Hola! 👋✨
+            Vengo desde la página de Artesana Insumos.
+
+            Mi nombre es: ${nombre}
+            El tipo de entrega que deseo es: ${entregaSeleccionada.value}
+
+            Mi pedido es:
+            `;
+
+            cart.forEach(item => {
+                const precioUnitario = parsePrice(item.precio);
+                const subtotal = precioUnitario * item.cantidad;
+                total += subtotal;
+
+                mensaje += `• ${item.titulo}:\n  x${item.cantidad} * ${precioUnitario}$ = ${subtotal}$\n`;
+            });
+
+            mensaje += `El total de mi compra es: $${total}
+
+            Comentarios sobre mi pedido:
+            ${comentarios || "Sin comentarios"}
+
+            Quedo pendiente para confirmar mi pedido y coordinar el pago.
+            ¡Muchas gracias! 💛🧶`;
+
+            const mensajeCodificado = encodeURIComponent(mensaje);
+
+            const telefono = "584246719237";
+
+            window.open(
+                `https://api.whatsapp.com/send?phone=${telefono}&text=${mensajeCodificado}`,
+                "_blank"
+            );
+        }
+
+function open_Modal_finish() {
+    document.getElementById("modal_finish").classList.add("open");
+}
+
+function close_Modal_finish() {
+    document.getElementById("modal_finish").classList.remove("open");
+}
+
+
+
     </script>
 
 </body>

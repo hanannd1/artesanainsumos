@@ -3,26 +3,26 @@ var isOpenNav = false
 function openAndCloseNav() {
     let navSlide = document.getElementById("navSlide");
     if (!isOpenNav) {
-        navSlide.classList.add("open"); 
+        navSlide.classList.add("open");
         isOpenNav = true;
     } else {
-        navSlide.classList.remove("open"); 
+        navSlide.classList.remove("open");
         isOpenNav = false;
     }
 }
 
 var isOpen = false;
-function navOpenAndClose(){
+function navOpenAndClose() {
     let colors = document.getElementById('coloresCarteras')
-    if(isOpen == false){
+    if (isOpen == false) {
         let scrollHeight = colors.scrollHeight; // Obtenemos la altura completa del contenido
         colors.style.height = scrollHeight + 'px';
         isOpen = true
-    }else{
+    } else {
         colors.style.height = '0'
         isOpen = false
     }
-} 
+}
 function apearAndDesapper(...categorias) {
     const [mostrarId, ...ocultarIds] = categorias;
 
@@ -52,20 +52,22 @@ function animateContainer(containerId) {
     setTimeout(() => {
         container.style.opacity = 1;
         container.style.transform = "translateX(0)";
-    }, 50); 
+    }, 50);
 }
 
 
 
-sr.reveal(".cuerpoVista",{
-    duration: 2000, 
+sr.reveal(".cuerpoVista", {
+    duration: 2000,
     origin: "left",
     distance: "150px",
     reset: false
 })
 
+
+
 fetch('./../../productos/hilos.json')
-   .then(response => {
+    .then(response => {
         if (!response.ok) {
             throw new Error('Error al cargar el archivo JSON');
         }
@@ -89,16 +91,27 @@ fetch('./../../productos/hilos.json')
                 ? `<h2>${producto.descripcion}</h2>`
                 : '';
 
+            const priceHTML = producto.descripcion
+                ? `<h3>${producto.precio}</h3>`
+                : '';
+
             tarjeta.innerHTML = `
                 <img src="${producto.img}" alt="${producto.titulo}">
                 <h3>${producto.titulo}</h3>
                 ${descripcionHTML}
-                <h3>${producto.precio}</h3>
+                ${priceHTML}
+                <button class="btn_add_cart">Agregar al carrito</button>
             `;
 
             tarjeta.addEventListener("click", () => {
                 open_modal(producto);
             });
+
+            tarjeta.querySelector(".btn_add_cart").addEventListener("click", (e) => {
+                e.stopPropagation();
+                addToCart(producto, e.currentTarget);
+            });
+
 
             contenedor.appendChild(tarjeta);
         });
@@ -115,7 +128,10 @@ fetch('./../../productos/hilos.json')
                 .join(", ");
 
             const boton = document.createElement("button");
-            boton.textContent = categoriaSeleccionada.charAt(0).toUpperCase() + categoriaSeleccionada.slice(1);
+            boton.textContent =
+                categoriaSeleccionada.charAt(0).toUpperCase() +
+                categoriaSeleccionada.slice(1);
+
             boton.setAttribute("onclick", `apearAndDesapper(${argumentos})`);
             contenedorCategorias.appendChild(boton);
         });
@@ -125,18 +141,68 @@ fetch('./../../productos/hilos.json')
     });
 
 
+
 function close_modal() {
     const modalBox = document.getElementById("modalBox");
     modalBox.style.display = "none";
 }
 
+const addCartSound = new Audio("./../../assets/sounds/pop_add_cart.mp3");
+addCartSound.volume = 0.4;
+
+function addToCart(producto, btn = null) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const index = cart.findIndex(p => p.titulo === producto.titulo);
+
+    if (index !== -1) {
+        cart[index].cantidad += producto.cantidad || 1;
+    } else {
+        cart.push({
+            titulo: producto.titulo,
+            img: producto.img,
+            descripcion: producto.descripcion,
+            precio: producto.precio || 0,
+            cantidad: producto.cantidad || 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    window.dispatchEvent(new CustomEvent("cart-updated"));
+
+    addCartSound.currentTime = 0;
+    addCartSound.play();
+
+    if (btn) {
+        btn.classList.add("added");
+        btn.textContent = "✔ Agregado";
+
+        setTimeout(() => {
+            btn.classList.remove("added");
+            btn.textContent = "Agregar al carrito";
+        }, 800);
+    }
+
+    const cartIcon = document.querySelector(".cart_icon");
+    if (cartIcon) {
+        cartIcon.classList.add("shake");
+        setTimeout(() => cartIcon.classList.remove("shake"), 400);
+    }
+}
+
+let productoActual = null;
+let cantidadModal = 1;
 
 function open_modal(producto) {
+    productoActual = producto;
+    cantidadModal = 1;
+
     const modalBox = document.getElementById("modalBox");
     const modalImg = modalBox.querySelector(".img_div img");
     const modalTitulo = modalBox.querySelector(".caracteristicas_div h2");
     const modalPrecio = modalBox.querySelector(".precio_modal");
     const modalDescripcion = modalBox.querySelector(".caracteristicas_div h3");
+    const cantidadText = modalBox.querySelector(".product_amount_car p");
 
     modalImg.src = producto.img;
     modalImg.alt = producto.titulo;
@@ -144,5 +210,37 @@ function open_modal(producto) {
     modalPrecio.textContent = producto.precio;
     modalDescripcion.textContent = producto.descripcion || "Sin descripción";
 
-    modalBox.style.display = "flex"; 
+    cantidadText.textContent = cantidadModal;
+
+    modalBox.style.display = "flex";
 }
+
+document.getElementById("modalBox").addEventListener("click", (e) => {
+
+    const actionBtn = e.target.closest("button[data-action]");
+    if (actionBtn) {
+        const action = actionBtn.dataset.action;
+
+        if (action === "plus") cantidadModal++;
+        if (action === "minus" && cantidadModal > 1) cantidadModal--;
+
+        document.querySelector("#modalBox .product_amount_car p").textContent = cantidadModal;
+        return;
+    }
+
+    const addBtn = e.target.closest(".btn_add_cart");
+    if (addBtn) {
+        if (!productoActual) return;
+
+        addToCart(
+            {
+                ...productoActual,
+                cantidad: cantidadModal
+            },
+            addBtn
+        );
+
+        close_modal();
+    }
+
+});
