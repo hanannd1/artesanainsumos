@@ -143,6 +143,15 @@ class NavSlide extends HTMLElement {
         return 0;
     }
 
+    resolveImgPath(img) {
+    const BASE = this.getBasePath();
+
+    const cleanPath = img.replace(/^(\.\/|\.\.\/)+/, '');
+
+    return BASE + cleanPath;
+}
+
+
 
     renderCartInNav() {
         const nav = this.shadowRoot.querySelector("#CarSlide");
@@ -166,12 +175,13 @@ class NavSlide extends HTMLElement {
 
             product.innerHTML = `
             <div class="product_img_car">
-                <img src="${item.img}" alt="${item.titulo}">
+                <img src="${this.resolveImgPath(item.img)}" alt="${item.titulo}">
+
             </div>
 
             <div class="product_details">
                 <div class="product_details_delete_car">
-                    <p>${item.titulo} : ${item.descripcion || ''}</p>
+                    <p>${item.titulo} ${" : "+ item.descripcion || ''}</p>
                 </div>
 
                 <div class="product_price_quantity">
@@ -256,6 +266,8 @@ Quedo pendiente para confirmar mi pedido y coordinar el pago.
         `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`,
         "_blank"
     );
+    this.close_Modal_finish();
+    this.deleteCart();
 }
 
 open_Modal_finish() {
