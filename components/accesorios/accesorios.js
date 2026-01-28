@@ -106,14 +106,13 @@ fetch('./../../productos/accesorios.json')
                 ? `<h2>${producto.descripcion}</h2>`
                 : '';
 
-            const priceHTML = producto.descripcion
+            const priceHTML = producto.precio
                 ? `<h3>${producto.precio}</h3>`
                 : '';
 
             tarjeta.innerHTML = `
                 <img src="${producto.img}" alt="${producto.titulo}">
                 <h3>${producto.titulo}</h3>
-                ${descripcionHTML}
                 ${priceHTML}
                 <button class="btn_add_cart">Agregar al carrito</button>
             `;

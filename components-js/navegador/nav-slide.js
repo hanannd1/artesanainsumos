@@ -144,12 +144,12 @@ class NavSlide extends HTMLElement {
     }
 
     resolveImgPath(img) {
-    const BASE = this.getBasePath();
+        const BASE = this.getBasePath();
 
-    const cleanPath = img.replace(/^(\.\/|\.\.\/)+/, '');
+        const cleanPath = img.replace(/^(\.\/|\.\.\/)+/, '');
 
-    return BASE + cleanPath;
-}
+        return BASE + cleanPath;
+    }
 
 
 
