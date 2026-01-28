@@ -175,7 +175,7 @@ class NavSlide extends HTMLElement {
 
             product.innerHTML = `
             <div class="product_img_car">
-                <img src="${this.resolveImgPath(item.img)}" alt="${item.titulo}">
+                <img loading="lazy" src="${this.resolveImgPath(item.img)}" alt="${item.titulo}">
 
             </div>
 
@@ -391,6 +391,7 @@ close_Modal_finish() {
             position: fixed;
             top: 0;
             height: 100vh;
+            height: 100dvh;
             z-index: 1200;
             padding: 10px;
             gap: 15px;
@@ -402,6 +403,12 @@ close_Modal_finish() {
             width: 500px;
             transition: transform 0.3s ease-in-out;
         }
+            @supports (-webkit-touch-callout: none) {
+    .CarSlide {
+        height: -webkit-fill-available;
+    }
+}
+
 
         @media (max-width: 768px) {
          .CarSlide {

@@ -92,7 +92,7 @@ fetch('./../../productos/hilos.json')
                 : '';
 
             tarjeta.innerHTML = `
-                <img src="${producto.img}" alt="${producto.titulo}">
+                <img loading="lazy" src="${producto.img}" alt="${producto.titulo}">
                 <h3>${producto.titulo}</h3>
                 ${priceHTML}
                 <button class="btn_add_cart">Agregar al carrito</button>
