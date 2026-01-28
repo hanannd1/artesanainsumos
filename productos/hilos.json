@@ -3,119 +3,119 @@
     "img": "./../../assets/hilos2mm/amarillo.jpg",
     "titulo": "Amarillo",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
    {
     "img": "./../../assets/hilos2mm/amarilloGirasol.jpg",
     "titulo": "Amarillo Girasol",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
   {
     "img": "./../../assets/hilos2mm/azul.jpg",
     "titulo": "Azul",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
   {
     "img": "./../../assets/hilos2mm/azulCielo.jpg",
     "titulo": "Azul cielo",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
   {
     "img": "./../../assets/hilos2mm/azulElectrico.jpg",
     "titulo": "Azul Electrico",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
   {
     "img": "./../../assets/hilos2mm/blancoHueso.jpg",
     "titulo": "Blanco hueso",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
   {
     "img": "./../../assets/hilos2mm/cafeClaro.jpg",
     "titulo": "Cafe",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
   {
     "img": "./../../assets/hilos2mm/marronClaro.jpg",
     "titulo": "Marron",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
    {
     "img": "./../../assets/hilos2mm/marronOscuro.jpg",
     "titulo": "Marron oscuro",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
    {
     "img": "./../../assets/hilos2mm/rojo.jpg",
     "titulo": "Rojo",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
    {
     "img": "./../../assets/hilos2mm/rosaBebe.jpg",
     "titulo": "Rosado bebe",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
   {
     "img": "./../../assets/hilos2mm/rosaChicle.jpg",
     "titulo": "Rosado chicle",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
    {
     "img": "./../../assets/hilos2mm/rosaClaro.jpg",
     "titulo": "Rosado claro",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
    {
     "img": "./../../assets/hilos2mm/rosaVieja.jpg",
     "titulo": "Rosa Vieja",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
    {
     "img": "./../../assets/hilos2mm/salmon.jpg",
     "titulo": "Salmon",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
     {
     "img": "./../../assets/hilos2mm/verde.jpg",
     "titulo": "Verde",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   },
    {
     "img": "./../../assets/hilos2mm/verdeEsmeralda.jpg",
     "titulo": "Verde esmeralda",
     "descripcion": "",
-    "precio": "",
+    "precio": "2,5$ (50gr)",
     "categoria": "hilos"
   }
 ]
