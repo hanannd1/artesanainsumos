@@ -102,10 +102,6 @@ fetch('./../../productos/accesorios.json')
             const tarjeta = document.createElement("div");
             tarjeta.classList.add("tarjeta");
 
-            const descripcionHTML = producto.descripcion
-                ? `<h2>${producto.descripcion}</h2>`
-                : '';
-
             const priceHTML = producto.precio
                 ? `<h3>${producto.precio}</h3>`
                 : '';
