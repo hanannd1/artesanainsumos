@@ -135,7 +135,7 @@ class ProductSearch extends HTMLElement {
          @media (max-width: 600px) {
 
              .label_input {
-            width: 90vw;
+            width: 80vw;
         }
 
           
