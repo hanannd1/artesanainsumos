@@ -321,11 +321,10 @@ close_Modal_search() {
                     cursor: pointer;
                     border: none;
                 }
-
                 .imagen {
                     width: 36px;
+                    height: auto;
                 }
-
                 .cajatitulo {
                     text-decoration: none;
                 }
@@ -427,12 +426,7 @@ close_Modal_search() {
         }
 
 
-        @media (max-width: 600px) {
-            .CarSlide {
-                width: 100vw;
-            }
-          
-        }
+      
 
         .CarSlide.open {
             transform: translateX(-500px);
@@ -809,6 +803,25 @@ close_Modal_search() {
             border: green 2px solid;
             transition: all .2s ease;
         }
+    
+
+        @media (max-width: 600px) {
+         .CarSlide {
+                width: 100vw;
+            }
+    .imagen {
+        width: 26px;
+    }
+
+    .boton {
+        padding: 4px;
+    }
+
+    .navegador {
+        padding: 8px;
+    }
+}
+
             </style>
 
             <!-- ====== BARRA SUPERIOR ====== -->
