@@ -431,12 +431,7 @@ close_Modal_search() {
             .CarSlide {
             width: 100vw;
             }
-            .imagen {
-                width: 10px;
-            }
-            .logotipo{
-                font-size:12px;
-            }    
+          
         }
 
         .CarSlide.open {

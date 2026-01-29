@@ -128,7 +128,7 @@ class ProductSearch extends HTMLElement {
         }
 
         .label_input {
-            width: 60vw;
+            width: 100%;
             position: relative;
         }
 
