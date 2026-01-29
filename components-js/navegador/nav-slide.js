@@ -432,10 +432,10 @@ close_Modal_search() {
             width: 100vw;
             }
             .imagen {
-                width: 20px;
+                width: 10px;
             }
             .logotipo{
-                font-size:18px;
+                font-size:12px;
             }    
         }
 
