@@ -323,7 +323,7 @@ close_Modal_search() {
                 }
 
                 .imagen {
-                    width: clamp(20px,50vw,36px);
+                    width: 36px;
                 }
 
                 .cajatitulo {
@@ -428,10 +428,15 @@ close_Modal_search() {
 
 
         @media (max-width: 600px) {
-         .CarSlide {
-       
+            .CarSlide {
             width: 100vw;
             }
+            .imagen {
+                width: 20px;
+            }
+            .logotipo{
+                font-size:18px;
+            }    
         }
 
         .CarSlide.open {
