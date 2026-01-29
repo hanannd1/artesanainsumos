@@ -128,8 +128,17 @@ class ProductSearch extends HTMLElement {
         }
 
         .label_input {
-            width: 100%;
+            width: 60vw;
             position: relative;
+        }
+
+         @media (max-width: 600px) {
+
+             .label_input {
+            width: 100vw;
+        }
+
+          
         }
 
         /* IMÁGENES */

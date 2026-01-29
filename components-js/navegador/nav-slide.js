@@ -429,7 +429,7 @@ close_Modal_search() {
 
         @media (max-width: 600px) {
             .CarSlide {
-            width: 100vw;
+                width: 100vw;
             }
           
         }
