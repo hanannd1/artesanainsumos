@@ -9,22 +9,28 @@ class NavSlide extends HTMLElement {
     connectedCallback() {
         this.render();
 
-        
-    this.shadowRoot
-        .getElementById("openFinish")
-        .addEventListener("click", () => this.open_Modal_finish());
+        this.shadowRoot
+            .getElementById("openFinish")
+            .addEventListener("click", () => this.open_Modal_finish());
 
-    this.shadowRoot
-        .getElementById("closeFinish")
-        .addEventListener("click", () => this.close_Modal_finish());
+        this.shadowRoot
+            .getElementById("closeFinish")
+            .addEventListener("click", () => this.close_Modal_finish());
 
-    this.shadowRoot
-        .getElementById("sendWhatsapp")
-        .addEventListener("click", () => this.enviarPedidoWhatsapp());
+        this.shadowRoot
+            .getElementById("sendWhatsapp")
+            .addEventListener("click", () => this.enviarPedidoWhatsapp());
 
-        window.addEventListener("cart-updated", () => {
-            this.renderCartInNav();
-        });
+            window.addEventListener("cart-updated", () => {
+                this.renderCartInNav();
+            });
+        this.shadowRoot
+            .getElementById("search_modal")
+            .addEventListener("click", () => this.open_Modal_search())
+        this.shadowRoot
+            .getElementById("search_modal_close")
+            .addEventListener("click", () => this.close_Modal_search())
+
 
         this.shadowRoot
             .querySelector(".boton")
@@ -45,7 +51,8 @@ class NavSlide extends HTMLElement {
         this.shadowRoot
             .querySelector("#boton_clear_car")
             .addEventListener("click", () => this.deleteCart())
-
+        
+    
         this.shadowRoot.addEventListener("click", (e) => {
             const deleteBtn = e.target.closest(".delete_img");
             const actionBtn = e.target.closest("button[data-action]");
@@ -281,7 +288,17 @@ close_Modal_finish() {
         .getElementById("modal_finish")
         .classList.remove("open");
 }
+open_Modal_search() {
+    this.shadowRoot
+        .getElementById("modal_search")
+        .classList.add("open");
+}
 
+close_Modal_search() {
+    this.shadowRoot
+        .getElementById("modal_search")
+        .classList.remove("open");
+}
 
     render() {
         const BASE = this.getBasePath();
@@ -306,7 +323,7 @@ close_Modal_finish() {
                 }
 
                 .imagen {
-                    width: 36px;
+                    width: clamp(20px,50vw,36px);
                 }
 
                 .cajatitulo {
@@ -404,17 +421,17 @@ close_Modal_finish() {
             transition: transform 0.3s ease-in-out;
         }
             @supports (-webkit-touch-callout: none) {
-    .CarSlide {
-        height: -webkit-fill-available;
-    }
-}
+            .CarSlide {
+                height: -webkit-fill-available;
+            }
+        }
 
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
          .CarSlide {
        
             width: 100vw;
-        }
+            }
         }
 
         .CarSlide.open {
@@ -664,7 +681,7 @@ close_Modal_finish() {
                 text-align:center;
             }
 
-                .modalBox {
+        .modalBox {
             width: 100%;
             height: 100%;
             position: fixed;
@@ -674,13 +691,30 @@ close_Modal_finish() {
             align-items: center;
             background-color: rgba(92, 44, 89, 0.6);
             opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
         }
         .modalBox.open {
-    opacity: 1;
-    pointer-events: auto;
-}
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modalBoxSearch{
+             width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 1600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(92, 44, 89, 0.6);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .modalBoxSearch.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
 
 
         .modal {
@@ -823,6 +857,20 @@ close_Modal_finish() {
                     </button>
                 </form>
             </div>
+        </div>
+        <div class="modalBoxSearch" id="modal_search">
+            <div class="modal">
+                <div class="container_button_close">
+                    <div class="close_modal_button_finish" id="search_modal_close">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+
+                <h2>¡Aquí puedes buscar tu producto!</h2>
+
+                    <product-search></product-search>
+
+            </div>
         </div>    
         <div class="barra-espaciadora"></div>
             <nav class="navSlide" id="navSlide">
@@ -853,7 +901,11 @@ close_Modal_finish() {
         <a href="${BASE}index.html" class="cajatitulo">
             <h2 class="logotipo">ARTESANA INSUMOS</h2>
         </a>
+        
         <div class="menu">
+         <button class="boton" id="search_modal">
+                <img class="imagen" src="${BASE}assets/search-icon.png">
+            </button>
             <button class="boton" id="boton_open_car">
                 <img class="imagen" src="${BASE}assets/carrito-de-compras.png">
             </button>
