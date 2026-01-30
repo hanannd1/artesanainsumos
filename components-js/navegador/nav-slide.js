@@ -819,6 +819,10 @@ close_Modal_search() {
             .navegador {
                 padding: 8px;
             }
+            .logotipo {
+                display:none;
+
+            }
 
         }
 
