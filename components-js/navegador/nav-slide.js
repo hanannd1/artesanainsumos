@@ -333,7 +333,13 @@ close_Modal_search() {
                     color: #9E5170;
                     margin:0;
                     font-size: clamp(18px, 2vw, 23px);
+                }
 
+                .movil{
+                    display: none;
+                }
+                .pc{
+                    display: inline-block;
                 }
 
                 .cajainvisible {
@@ -819,9 +825,11 @@ close_Modal_search() {
             .navegador {
                 padding: 8px;
             }
-            .logotipo {
-                display:none;
-
+            .movil{
+                display: inline-block;
+            }
+            .pc{
+                display: none;
             }
 
         }
@@ -918,11 +926,15 @@ close_Modal_search() {
         <a href="${BASE}index.html" class="cajatitulo">
             <h2 class="logotipo">ARTESANA INSUMOS</h2>
         </a>
-        
-        <div class="menu">
+        <div class="menu movil">
          <button class="boton" id="search_modal">
                 <img class="imagen" src="${BASE}assets/search-icon.png">
             </button>
+        </div>
+        <div class="menu">
+            <button class="boton pc" id="search_modal">
+                    <img class="imagen" src="${BASE}assets/search-icon.png">
+                </button>
             <button class="boton" id="boton_open_car">
                 <img class="imagen" src="${BASE}assets/carrito-de-compras.png">
             </button>
