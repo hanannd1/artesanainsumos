@@ -25,8 +25,11 @@ class NavSlide extends HTMLElement {
                 this.renderCartInNav();
             });
         this.shadowRoot
-            .getElementById("search_modal")
-            .addEventListener("click", () => this.open_Modal_search())
+            .querySelectorAll(".search-btn")
+            .forEach(btn => {
+                btn.addEventListener("click", () => this.open_Modal_search());
+            });
+
         this.shadowRoot
             .getElementById("search_modal_close")
             .addEventListener("click", () => this.close_Modal_search())
@@ -834,6 +837,536 @@ close_Modal_search() {
 
         }
 
+            </style> <style>
+                /* ====== BARRA SUPERIOR ====== */
+
+                .navegador {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: #fcdfd4;
+                    padding: 10px;
+;
+                }
+
+                .boton {
+                    background-color: #fcdfd4;
+                    cursor: pointer;
+                    border: none;
+                }
+                
+                .cajatitulo {
+                    text-decoration: none;
+                }
+                .imagen {
+                    width: clamp(15px, 50vw, 29px);
+                    height: auto;
+                }
+                .logotipo {
+                    color: #9E5170;
+                    margin:0;
+                    font-size: clamp(18px, 2vw, 23px);
+                }
+
+                .movil{
+                    display: none;
+                }
+                .pc{
+                    display: inline-block;
+                }
+
+                .cajainvisible {
+                    width: 36px;
+                }
+
+                /* ====== NAV SLIDE ====== */
+                .navSlide {
+                    display: flex;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    background-color: #fcdfd4;
+                    position: fixed;
+
+                    top: 0;              /* ← AÑADE SOLO ESTO */
+                    height: 100vh;
+
+                    z-index: 1200;
+                    padding: 10px 30px 10px 10px;
+                    gap: 15px;
+                    border-right: 5px #5c2c59 solid;
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.80));
+                    flex-direction: column;
+
+                    left: -300px;
+                    width: 300px;
+                    transition: transform 0.3s ease-in-out;
+                }
+
+
+                .navSlide.open {
+                    transform: translateX(300px);
+                }
+
+                .botonNav img {
+                    width: 36px;
+                    cursor: pointer;
+                }
+
+                .categoriasMenu {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .categoriasMenu a {
+                    text-decoration: none;
+                    color: #5c2c59;
+                    font-size: 22px;
+                    font-weight: 800;
+                }
+
+                .iconWaAndIn {
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 20px;
+                }
+
+                .icono-enlace-nav {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                }
+                     /* ========== CarSlide ========*/
+        .CarSlide {
+            display: flex;
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-sizing: border-box;
+
+            scrollbar-width: none;
+            background-color: #fcdfd4;
+            position: fixed;
+            top: 0;
+            height: 100vh;
+            height: 100dvh;
+            z-index: 1200;
+            padding: 10px;
+            gap: 15px;
+            border-left: 5px #5c2c59 solid;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.80));
+            flex-direction: column;
+
+            right: -500px;
+            width: 500px;
+            transition: transform 0.3s ease-in-out;
+        }
+            @supports (-webkit-touch-callout: none) {
+            .CarSlide {
+                height: -webkit-fill-available;
+            }
+        }
+
+
+      
+
+        .CarSlide.open {
+            transform: translateX(-500px);
+        }
+
+        .close_modal_button {
+            cursor: pointer;
+            transition: all .3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            color: #9E5170;
+            border: solid 2px #9E5170;
+            width: 30px;
+        }
+
+        .close_modal_button:hover {
+            color: white;
+            background-color: #9E5170;
+            ;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            transition: all .3s ease;
+        }
+
+        .title_car {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            color: #5c2c59;
+        }
+
+        .title_car h2 {
+            margin: 10px 0;
+        }
+
+        .body_car {
+            border: 3px solid #5c2c59;
+            padding: 10px 30px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            height: 100vh;
+
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-sizing: border-box;
+
+            scrollbar-width: none;
+        }
+
+        .body_car::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        .product_car {
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            gap: 30px;
+            padding: 0 5px;
+        }
+
+        .product_img_car {
+            width: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product_img_car img {
+            width: clamp(30px, 50vw, 60px);
+            object-fit: cover;
+            border-radius: 15px;
+            aspect-ratio: 1/1;
+            border: 2px #5c2c59 solid;
+            border-radius: 12px;
+        }
+
+        .product_details {
+            width: 90%;
+        }
+
+        .product_price_quantity {
+            display: grid;
+            grid-template-columns: auto auto 1fr;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .product_amount_car {
+            display: flex;
+            align-items: center;
+            height: fit-content;
+        }
+
+        .product_amount_car button {
+            background-color: #5c2c59;
+            color: white;
+            width: 25px;
+            font-weight: bold;
+            height: 25px;
+            border: transparent 2px solid;
+            transition: all .3s ease;
+            cursor: pointer;
+
+        }
+
+        .product_amount_car p {
+            background-color: white;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .product_amount_car button:nth-child(1) {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+
+        }
+
+        .product_amount_car button:nth-child(3) {
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+
+        }
+
+        .product_amount_car button:hover {
+            background-color: white;
+            color: #5c2c59;
+            width: 25px;
+            border: #5c2c59 2px solid;
+            transition: all .3s ease;
+        }
+
+        .product_price_car {
+            border: 2px #5c2c59 solid;
+            border-radius: 12px;
+            height: 30px;
+            padding: 0 5px;
+            background-color: white;
+        }
+
+        .product_price_car p {
+            margin: 5px 0;
+            color: #5c2c59;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .product_details_delete_car {
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .product_details_delete_car p {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-size: 14px;
+        }
+
+        .delete_img img {
+            cursor: pointer;
+            width: clamp(15px, 50vw, 20px);
+            transition: all .3s ease;
+        }
+
+        .delete_img img:hover {
+            transform: scale(1.2);
+            transition: all .3s ease;
+        }
+
+        .total_car {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 15px;
+            border: 3px solid #5c2c59;
+
+        }
+
+        .total_car h3 {
+            margin: 10px;
+            color: #5c2c59;
+        }
+
+        .delete_finish_button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .green_button {
+            background-color: green;
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: transparent 2px solid;
+            transition: all .2s ease;
+            cursor: pointer;
+        }
+
+        .green_button:hover {
+            background-color: white;
+            color: green;
+            border: green 2px solid;
+            transition: all .2s ease;
+        }
+
+        .red_button {
+            background-color: red;
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: transparent 2px solid;
+            transition: all .2s ease;
+            cursor: pointer;
+
+        }
+
+        .red_button:hover {
+            background-color: white;
+            color: red;
+            border: red 2px solid;
+            transition: all .2s ease;
+        }
+            .empty_cart{
+                text-align:center;
+            }
+
+        .modalBox {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 1600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(92, 44, 89, 0.6);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .modalBox.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modalBoxSearch{
+             width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 1600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(92, 44, 89, 0.6);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .modalBoxSearch.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+
+        .modal {
+            width: fit-content;
+            background-color: #9E5170;
+            color: white;
+            padding: 10px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            overflow: hidden;
+            box-sizing: border-box;
+            border-radius: 20px;
+            border: solid 3px white;
+        }
+
+        .container_button_close {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+        }
+
+        .close_modal_button_finish {
+            cursor: pointer;
+            transition: all .3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            color: white;
+
+            border: solid 2px white;
+            width: 30px;
+
+        }
+
+        .close_modal_button_finish:hover {
+            color: #9E5170;
+            background-color: white;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            transition: all .3s ease;
+        }
+
+        .formPedido {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .label_input {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .label_input input, .label_input textarea{
+            border: 2px solid #5c2c59;
+            padding: 5px 15px;
+            border-radius: 10px;
+
+        }
+         .label_input input:focus, .label_input textarea:focus  {
+            outline: none;
+        }
+        .checkbox_unico input[type="radio"] {
+            accent-color: #5c2c59;
+            outline: none;
+            width: 30px;
+            margin: 8px 0;
+        }   
+
+       .button_finish_modal {
+            background-color: green;
+            color: white;
+            width: fit-content;
+            height: fit-content;
+            margin: 0 auto;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: transparent 2px solid;
+            transition: all .2s ease;
+            cursor: pointer;
+        }
+
+        .button_finish_modal:hover {
+            background-color: white;
+            color: green;
+            border: green 2px solid;
+            transition: all .2s ease;
+        }
+    
+
+        @media (max-width: 700px) {
+         .CarSlide {
+                width: 100vw;
+            }
+
+            .boton {
+                padding: 4px;
+            }
+
+            .navegador {
+                padding: 8px;
+            }
+            .movil{
+                display: inline-block;
+            }
+            .pc{
+                display: none;
+            }
+
+        }
+
             </style>
 
             <!-- ====== BARRA SUPERIOR ====== -->
@@ -923,18 +1456,20 @@ close_Modal_search() {
                 <img class="imagen" src="${BASE}assets/simbolo-de-lista-de-tres-elementos-con-puntos.png">
             </button>
         </div>
-        <a href="${BASE}index.html" class="cajatitulo">
+        <a href="${BASE}index.html" class="cajatitulo pc">
             <h2 class="logotipo">ARTESANA INSUMOS</h2>
         </a>
         <div class="menu movil">
-         <button class="boton" id="search_modal">
+         <button class="boton search-btn">
                 <img class="imagen" src="${BASE}assets/search-icon.png">
             </button>
         </div>
         <div class="menu">
-            <button class="boton pc" id="search_modal">
+            <div class="pc">
+                <button class="boton search-btn">
                     <img class="imagen" src="${BASE}assets/search-icon.png">
                 </button>
+            </div>
             <button class="boton" id="boton_open_car">
                 <img class="imagen" src="${BASE}assets/carrito-de-compras.png">
             </button>
