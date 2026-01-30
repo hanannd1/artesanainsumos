@@ -321,18 +321,18 @@ close_Modal_search() {
                     cursor: pointer;
                     border: none;
                 }
-                .imagen {
-                    width: clamp(15px, 100vw, 29px);
-                    height: auto;
-                }
+                
                 .cajatitulo {
                     text-decoration: none;
                 }
-
+                .imagen {
+                    width: clamp(15px, 50vw, 29px);
+                    height: auto;
+                }
                 .logotipo {
                     color: #9E5170;
                     margin:0;
-                    font-size: clamp(15px, 2vw, 23px);
+                    font-size: clamp(18px, 2vw, 23px);
 
                 }
 
