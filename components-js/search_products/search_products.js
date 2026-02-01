@@ -107,121 +107,145 @@ class ProductSearch extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
         <style>
-          .label_input input {
-            border: 2px solid #5c2c59;
-            padding: 15px;
-            margin: 0 auto;
-            width: 100%;
-            border-radius: 15px;
-        }
+            .label_input input {
+                border: 2px solid #5c2c59;
+                padding: 15px;
+                width: 100%;
+                border-radius: 15px;
+                font-size: 1rem;
+                box-sizing: border-box;
+                margin:0 auto;
+            }
 
-        .label_input input:focus {
-            outline: none;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
+            .label_input input:focus {
+                outline: none;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
 
-        section {
-            margin: 0 0 60px 0;
-            display: flex;
-            justify-content: center;
-        }
+            section {
+                margin: 0 0 60px 0;
+                display: flex;
+                justify-content: center;
+            }
 
-        .label_input {
-            width: 60vw;
-            position: relative;
-        }
+            .label_input {
+                width: 80vw;
+                position: relative;
+            }
 
-         @media (max-width: 600px) {
+            img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border: 2px solid #5c2c59;
+                border-radius: 15px 0 0 15px;
+            }
 
-             .label_input {
-            width: 80vw;
-        }
+            .results {
+                border: 2px solid #5c2c59;
+                color: #5c2c59;
+                width: 100%;
+                max-height: 0;
+                opacity: 0;
+                overflow-y: auto;
+                background-color: #fcdfd4;
+                padding: 0 15px;
+                transform: translateY(-10px);
+                transition:
+                    max-height 0.35s ease,
+                    opacity 0.25s ease,
+                    transform 0.35s ease;
+                scrollbar-width: none;
+                border-radius: 0 0 15px 15px;
+                box-sizing: border-box;
+            }
 
-          
-        }
+            .results::-webkit-scrollbar {
+                display: none;
+            }
 
-        /* IMÁGENES */
-        img {
-            width: clamp(50px, 50vw, 80px);
-            object-fit: cover;
-            border: 2px solid #5c2c59;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-        }
-        .label_input input,
-        .results {
-            box-sizing: border-box;
-        }
-
-        /* CONTENEDOR RESULTADOS */
-        .results {
-            border: 2px solid #5c2c59;
-            color: #5c2c59;
-            width: 100%;
-            max-height: 0;
-            opacity: 0;
-            overflow-y: auto;
-            box-sizing: border-box;
-            background-color: #fcdfd4;
-            padding: 0 15px;
-            transform: translateY(-10px);
-            transition:
-                max-height 0.35s ease,
-                opacity 0.25s ease,
-                transform 0.35s ease;
-
-            scrollbar-width: none;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-
-        .results::-webkit-scrollbar {
-            width: 0;
-            height: 0;
-        }
-
-        /* MOSTRAR RESULTADOS */
-        .label_input:focus-within .results {
-            max-height: 50vh;
-            opacity: 1;
-            transform: translateY(0);
-            padding: 10px 15px;
-        }
-
-        /* CARD */
-        .result {
-            display: flex;
-            gap: 15px;
-            margin: 20px 0;
-            background-color: #fce0d5;
-            border-bottom: 2px solid #5c2c59;
-            border-radius: 15px 0 0 15px;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
-            cursor: pointer;
-
-            opacity: 0;
-            transform: translateY(10px);
-            animation: fadeInUp 0.3s ease forwards;
-
-            transition: 
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .result:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-        }
-
-
-        /* ANIMACIÓN CARDS */
-        @keyframes fadeInUp {
-            to {
+            .label_input:focus-within .results {
+                max-height: 50vh;
                 opacity: 1;
                 transform: translateY(0);
+                padding: 10px 15px;
             }
-        }
+
+            .result {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin: 15px 0;
+                background-color: #fce0d5;
+                border-bottom: 2px solid #5c2c59;
+                border-radius: 15px 0 0 15px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+                cursor: pointer;
+                opacity: 0;
+                transform: translateY(10px);
+                animation: fadeInUp 0.3s ease forwards;
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+
+            .result:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            }
+
+            .details strong {
+                font-size: 1rem;
+                display: block;
+            }
+
+            .details p {
+                margin: 5px 0 0;
+                font-size: 0.9rem;
+            }
+
+            @keyframes fadeInUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 600px) {
+
+                section {
+                    margin-bottom: 40px;
+                }
+
+
+                .label_input input {
+                    padding: 12px;
+                    font-size: 0.9rem;
+                    border-radius: 12px;
+                }
+
+                img {
+                    width: 55px;
+                    height: 55px;
+                }
+
+                .result {
+                    gap: 10px;
+                    margin: 10px 0;
+                }
+
+                .details strong {
+                    font-size: 0.9rem;
+                }
+
+                .details p {
+                    font-size: 0.75rem;
+                }
+
+                .label_input:focus-within .results {
+                    max-height: 60vh;
+                }
+            }
+
 
             
         </style>

@@ -1253,6 +1253,7 @@ close_Modal_search() {
 
 
         .modal {
+            max-width: 90vw;
             width: fit-content;
             background-color: #9E5170;
             color: white;
