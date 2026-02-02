@@ -91,53 +91,53 @@ body {
     cursor: pointer;
 }
 
-.carrusel {
-    margin-top: 20px;
-    width: 100%;
-    height: 400px;
+.carrusel-wrapper {
+    width: 100vw;
     overflow: hidden;
+}
+
+.carrusel {
+    width: 100%;
+    height: clamp(250px, 50vw, 400px);
     display: flex;
-    justify-content: center;
-    position: relative;
-    box-sizing: border-box;
+    animation: carrusel 8s infinite;
+    margin-bottom: 20px;
 }
 
 .contenedorprincipal {
-    position: absolute;
-    width: clamp(350px,50vw,500px);
-    height:clamp(250px,50vw,300px);
+    flex: 0 0 100%;
+    height: 100%;
+    position: relative;
     overflow: hidden;
-    border-radius: 30px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.50));
 }
 
-.contenedorprincipal:nth-child(1) {
-    animation: carrousel 15s infinite;
+@keyframes carrusel {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-100%);
+    }
+    65% {
+        transform: translateX(-100%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
 }
-
-.contenedorprincipal:nth-child(2) {
-    animation: carrousel 15s infinite -5s;
-}
-
-.contenedorprincipal:nth-child(3) {
-    animation: carrousel 15s infinite -10s;
-}
-
-.contenedorprincipal:nth-child(4) {
-    animation: carrousel 15s infinite -10s;
-}
-
-
 
 .imagencontenedorprincipal {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
-    border-radius: 30px;
 }
 
 .titulocontenedorprincipal {
@@ -159,10 +159,9 @@ body {
     border-radius: 5px;
     padding: 10px;
     width: calc(100% - 30px);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+
 
 .catalogo {
     width: 100%;
@@ -174,7 +173,6 @@ body {
 }
 
 .titulocatalogo {
-    margin-top: -80px;
     margin-bottom: 0px;
 }
 
@@ -280,31 +278,4 @@ ul {
     padding: 0;
 }
 
-@keyframes carrousel {
-    0%, 100% {
-        transform: translateX(1000px) scale(0.5);
-    }
-    20%, 25% {
-        transform: translateX(500px) scale(0.5);
-        z-index: 10;
 
-    }
-    50%, 55% {
-        transform: translateX(0) scale(1);
-        z-index: 10;
-
-    }
-    80%, 90% {
-        transform: translateX(-500px) scale(0.5);
-
-    }
-    90%, 100%{
-        transform: translateX(-1000px) scale(0.5) ;
-    }
-}
-
-@media (max-width: 800px) {
-    .catalogo{
-        margin-top: -50px;
-    }
-}
