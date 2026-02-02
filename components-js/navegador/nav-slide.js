@@ -685,6 +685,7 @@ close_Modal_search() {
                 transition: all .2s ease;
             }
                 .empty_cart{
+                    color: #fce0d5;
                     text-align:center;
                 }
 
