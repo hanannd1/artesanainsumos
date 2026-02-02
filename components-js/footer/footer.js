@@ -40,7 +40,7 @@ class FooterCostume extends HTMLElement {
                 }
 
                 .logotipo {
-                    color: #9E5170;
+                    color: #fce0d5;
                 }
 
                 .footertitle {

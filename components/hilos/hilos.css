@@ -506,6 +506,7 @@ ul {
     padding: 5px;
     border-radius: 50%;
     aspect-ratio: 1/1;
+    background-color: #9E5170;
     position: absolute;
     border: solid 2px white;
 }
