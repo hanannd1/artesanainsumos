@@ -29,6 +29,8 @@ class FooterCostume extends HTMLElement {
                     justify-content: center;
                     align-items: center;
                     width: 100%;
+                    overflow: hidden;
+                    box-sizing: border-box;
                 }
 
                 .contenidofooter {
