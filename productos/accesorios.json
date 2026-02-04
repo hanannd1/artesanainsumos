@@ -4,146 +4,167 @@
     "titulo": "Cinta metrica retractil de Hello Kitty",
     "descripcion": "",
     "precio": "8,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
    {
     "img": "./../../assets/accesorios/metroSanrio.jpg",
     "titulo": "Cinta metrica retractil de personajes sanrio",
     "descripcion": "Disponible Hello Kitty",
     "precio": "7,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
    {
     "img": "./../../assets/accesorios/contadorPuntos.jpg",
     "titulo": "Contador digital de vueltas",
     "descripcion": "Consulta la disponibilidad de cada color",
     "precio": "3$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
     {
     "img": "./../../assets/accesorios/lentesAmigurumi.jpg",
     "titulo": "Lentes mini para amigurumis",
     "descripcion": "Consulta la disponibilidad de cada color",
     "precio": "1,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
    {
     "img": "./../../assets/accesorios/llaveroAgujas.jpg",
     "titulo": "Llavero de agujas crochet",
     "descripcion": "",
     "precio": "7,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
    {
     "img": "./../../assets/accesorios/maquinaPompon.jpg",
     "titulo": "Maquina para hacer pompones",
     "descripcion": "",
     "precio": "18$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
     {
     "img": "./../../assets/accesorios/marcadores.jpg",
     "titulo": "10 marcadores de punto",
     "descripcion": "(colores variados)",
     "precio": "4,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
     {
     "img": "./../../assets/accesorios/ojosSeguridad.jpg",
     "titulo": "Ojos de seguridad para amigurumis (paquete de 5 pares)",
     "descripcion": "Disponibles tamaños 5mm, 6mm, 7mm, 8mm, 9mm, 10mm, 11mm, 12mm",
     "precio": "3,8$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
    {
     "img": "./../../assets/accesorios/standAmigurumi.jpg",
     "titulo": "Base/Soporte para amigurumis",
     "descripcion": "la base de madera mide 1cm de grosor/altura y 6cm de diamtero, los palitos de aluminio miden 5cm de largo",
     "precio": "5,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
   {
     "img": "./../../assets/accesorios/anilloGatitoPlateado.jpg",
     "titulo": "Anillo ajustable para tejer (Gatito Plateado)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "5,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
   {
     "img": "./../../assets/accesorios/anilloGatoPlateado.jpg",
     "titulo": "Anillo ajustable para tejer (Gatito Plateado)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "5,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
   {
     "img": "./../../assets/accesorios/anilloGatoDorado.jpg",
     "titulo": "Anillo ajustable para tejer (Gato Dorado)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "5,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
    {
     "img": "./../../assets/accesorios/anilloGatoNegro.jpg",
     "titulo": "Anillo ajustable para tejer (Gato Negro)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "5,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
   {
     "img": "./../../assets/accesorios/anilloGatoOroRosa.jpg",
     "titulo": "Anillo ajustable para tejer (Gato oro rosa)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "5,5$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
   {
     "img": "./../../assets/accesorios/anilloLobo.jpg",
     "titulo": "Anillo ajustable para tejer (Lobo)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "6$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
   {
     "img": "./../../assets/accesorios/anilloMapache.jpg",
     "titulo": "Anillo ajustable para tejer (Mapache)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "6$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
    {
     "img": "./../../assets/accesorios/anilloMariposa.jpg",
     "titulo": "Anillo ajustable para tejer (Mariposa)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "6$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
    {
     "img": "./../../assets/accesorios/anilloPez.jpg",
     "titulo": "Anillo ajustable para tejer (Pez)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "6$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
    {
     "img": "./../../assets/accesorios/anilloSerpienteSencilla.jpg",
     "titulo": "Anillo ajustable para tejer (Serpiente)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "6$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
   {
     "img": "./../../assets/accesorios/anilloTigre.jpg",
     "titulo": "Anillo ajustable para tejer (Tigre)",
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "6$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   },
   {
     "img": "./../../assets/accesorios/alambreFloral.jpg",
     "titulo": "Alambre floral 25 cm",
     "descripcion": "paquete de 100 unidades",
     "precio": "15$",
-    "categoria": "accesorios"
+    "categoria": "accesorios",
+    "stock": true
   }
 ]

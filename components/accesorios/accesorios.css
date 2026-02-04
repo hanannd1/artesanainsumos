@@ -239,6 +239,8 @@ button {
     transition: transform 0.5s ease;
     height: fit-content;
     cursor: pointer;
+    position: relative; 
+
 }
 
 .tarjeta:hover {
@@ -273,6 +275,59 @@ button {
     color: #9E5170;
     border-radius: 5px;
     font-size: 15px;
+}
+
+.sin-stock {
+    position: absolute;
+    top: 30px;
+    left: -80px;
+    width: 250px;
+    text-align: center;
+    background-color: #b00020;
+    color: white;
+    font-weight: bold;
+    padding: 6px 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.6);
+    z-index: 10;
+    font-size: 20px;
+}
+.tarjeta:has(.sin-stock) {
+    opacity: 0.75;
+}
+
+.tarjeta:has(.sin-stock) .btn_add_cart {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.btn_add_cart {
+    background-color: green;
+    color: white;
+    height: fit-content;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: white 2px solid;
+    transition: all .2s ease;
+    cursor: pointer;
+
+}
+
+.btn_add_cart:hover {
+    background-color: white;
+    color: green;
+    border: white 2px solid;
+    transition: all .2s ease;
+}
+.btn_add_cart {
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.btn_add_cart.added {
+    transform: scale(1.08);
+    background-color: #4CAF50;
+    color: #fff;
 }
 
 #bouquetsEspeciales,
@@ -329,25 +384,7 @@ button {
     padding: 0;
 }
 
-.btn_add_cart {
-    background-color: green;
-    color: white;
-    height: fit-content;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: white 2px solid;
-    transition: all .2s ease;
-    cursor: pointer;
 
-}
-
-.btn_add_cart:hover {
-    background-color: white;
-    color: green;
-    border: white 2px solid;
-    transition: all .2s ease;
-}
 
 .product_amount_car {
     display: flex;
@@ -396,15 +433,7 @@ button {
     border: #5c2c59 2px solid;
     transition: all .3s ease;
 }
-.btn_add_cart {
-    transition: transform 0.15s ease, background-color 0.15s ease;
-}
 
-.btn_add_cart.added {
-    transform: scale(1.08);
-    background-color: #4CAF50;
-    color: #fff;
-}
 
 /* Opcional: animación carrito */
 @keyframes cartShake {

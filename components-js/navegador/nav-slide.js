@@ -730,7 +730,7 @@ close_Modal_search() {
                 width: fit-content;
                 background-color: #9E5170;
                 color: white;
-                padding: 10px 30px;
+                padding: 10px ;
                 display: flex;
                 flex-direction: column;
                 align-items: center;

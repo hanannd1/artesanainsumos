@@ -88,17 +88,27 @@ fetch('./../../productos/agujas.json')
             const priceHTML = producto.precio
                 ? `<h3>${producto.precio}</h3>`
                 : '';
+            
+            const sinStockHTML = producto.stock === false
+                ? `<div class="sin-stock">Sin stock</div>`
+                : '';
 
             tarjeta.innerHTML = `
+                ${sinStockHTML}
                 <img loading="lazy" src="${producto.img}" alt="${producto.titulo}">
                 <h3>${producto.titulo}</h3>
                 ${priceHTML}
-                <button class="btn_add_cart">Agregar al carrito</button>
+                <button class="btn_add_cart" ${producto.stock === false ? 'disabled' : ''}>
+                    Agregar al carrito
+                </button>
             `;
 
-            tarjeta.addEventListener("click", () => {
-                open_modal(producto);
-            });
+            if(producto.stock == true){
+                tarjeta.addEventListener("click", () => {
+                    open_modal(producto);
+                });
+            }
+            
 
             tarjeta.querySelector(".btn_add_cart").addEventListener("click", (e) => {
                 e.stopPropagation();
