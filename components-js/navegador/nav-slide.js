@@ -337,7 +337,7 @@ close_Modal_search() {
                 .logotipo {
                     color: #fce0d5;
                     margin:0;
-                    font-size: clamp(18px, 2vw, 23px);
+                    font-size: clamp(20px, 4vw, 23px);
                 }
 
                 .movil{
