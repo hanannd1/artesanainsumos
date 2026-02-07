@@ -13,7 +13,7 @@
     "descripcion": "Disponible Hello Kitty",
     "precio": "7,5$",
     "categoria": "accesorios",
-    "stock": true
+    "stock": false
   },
    {
     "img": "./../../assets/accesorios/contadorPuntos.jpg",
@@ -109,7 +109,7 @@
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "5,5$",
     "categoria": "accesorios",
-    "stock": true
+    "stock": false
   },
   {
     "img": "./../../assets/accesorios/anilloLobo.jpg",
@@ -117,7 +117,7 @@
     "descripcion": "te ayuda a controlar la tension al tejer y evita que se maltrate tu dedo con el roce del hilo",
     "precio": "6$",
     "categoria": "accesorios",
-    "stock": true
+    "stock": false
   },
   {
     "img": "./../../assets/accesorios/anilloMapache.jpg",
